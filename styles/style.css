@@ -341,3 +341,84 @@
     grid-row: 3;
   }
 }
+
+@media (width >= 1024px){
+  :root{
+    --header-label-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    align-self: start;
+    margin-block-start: 5px;
+  }
+
+  .header__theme-menu-list{
+    flex-direction: row;
+    gap: 15px;
+    padding-left: 15px;
+  }
+
+  .header-text{
+    margin-block-start: 60px;
+    max-width: 490px;
+  }
+
+  .card__list {
+    margin: 20px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-areas: 
+    "card__list-title card-text"
+    "card__list-title card-text"
+    "card__list-title card-text"
+    "card__list-title card-text"
+    "card__list-title card-text"
+    "card__list-title card-text"
+    ;
+    gap: 0px;
+    row-gap: 0;
+  }
+
+  .card__list-title {
+    gap: 10px;
+    margin-bottom: 0;
+    max-width: 340px;
+    margin-block-start: 25px;
+  }
+
+  .concentration-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "card__list-title card__list-title card__list-title"
+    "card__list-item card__list-item card__list-item"
+    ;
+    column-gap: 20px;
+  }
+
+  .concentration-list .card-title{
+    margin-bottom: 10px;
+  }
+
+  .images-card__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:  repeat(3, 0.3fr);
+    grid-auto-flow: dense;
+    padding: 0;
+  }
+
+  .images {
+    padding-bottom: 0;
+  }
+
+  .footer-title {
+    margin-block-start: 0;
+  }
+
+}
