@@ -1,4 +1,14 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root{
+  --background-color: #000028;
+  --header-label-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --header-label-text-color: #DB00FF;
+  --header-label-box-shadow-color: #FF0070;
+  --title-text-color: #000028;
+  --text-font-size: 18px;
+  --title-color: #FF0070;
+  --text-color: #F1B2CE;
+  --text-shadow-color: #FF0070;
+  --border-color: #FF0070;
+  --header-background-image: url(../images/cover-image-dark.png);
+  --decoration-color: #FF0070;
+}

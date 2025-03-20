@@ -1,5 +1,343 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: "IBM Plex mono";
+  display: grid;
+  grid-template-rows: 100vh repeat(2, minmax(min-content, max-content)) 100vh;
+  grid-template-areas: 
+  "header"
+  "info";
+  margin: 0;
+  gap: 25px;
+  background-color: var(--background-color);
+}
+
+.section-title {
+  color: var(--header-label-text-color);
+  font-family: inherit;
+  font-size: var(--header-label-font-size);
+  text-shadow: 4px 4px var(--text-shadow-color);
+  margin: 0;
+  line-height: 95.7px;
+}
+
+.header {
+  position: relative;
+  grid-area: header;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+  "header__theme-menu"
+  "header-title"
+  "header-text_container";
+  background-image: var(--header-background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 10px 20px 10px;
+}
+
+.rec-text {
+  color: var(--title-color);
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: var(--text-font-size);
+}
+
+.rec-dot {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--decoration-color);
+  border-radius: 50%;
+  box-shadow: var(--text-shadow-color) 0 0 10px;
+}
+
+.top-right-border {
+  position: absolute;
+  border-right: 1px var(--decoration-color) solid;
+  border-top: 1px var(--decoration-color) solid;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.bottom-left-border {
+  position: absolute;
+  border-left: 1px var(--decoration-color) solid;
+  border-bottom: 1px var(--decoration-color) solid;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.header__theme-menu{
+  grid-area: header__theme-menu;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  align-self: center;
+  margin-block-start: 30px;
+}
+
+.header__theme-menu-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header__theme-menu-item {
+  font-family: inherit;
+  padding: 0 5px 0 5px;
+}
+
+.header__theme-menu-button{
+  line-height: 18px;
+  word-spacing: 5px;
+  font-weight: 400;
+  font-family: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  font-size: var(--text-font-size);
+  color: var(--title-color);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-item:last-child{
+  border: 1px var(--border-color) solid;
+}
+
+.header-title {
+  grid-area: header-title;
+  justify-self: end;
+  align-self: end;
+}
+
+.header-text_container {
+  grid-area: header-text_container;
+  align-self: center;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+
+.header-text{
+  font-family: inherit;
+  font-size: var(--text-font-size);
+  font-weight: 700;
+  color: var(--title-text-color);
+  max-width: 360px;
+}
+
+.header-text-paragraph{
+  margin: 0;
+}
+
+.title-decor {
+  background-color: var(--title-color);
+}
+
+.info {
+  grid-area: info;
+  grid-template-rows: repeat(minmax(min-content, max-content));
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card__list {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  margin-top: 0;
+}
+
+.card__list-item{
+  margin-top: 20px;
+}
+
+.card__list-title{
+  color: var(--title-color);
+  font-size: var(--text-font-size);
+}
+
+.card-title {
+  margin-top: 20px;
+  color: var(--title-text-color);
+  font-size: var(--text-font-size);
+  background-color: var(--title-color);
+}
+
+.images-card-title {
+  margin: 0;
+  margin-top: 15px;
+  color: var(--title-text-color);
+  font-size: var(--text-font-size);
+  background-color: var(--title-color);
+}
+
+.card-text {
+  margin: 0;
+  font-size: var(--text-font-size);
+  color: var(--text-color);
+}
+
+.card-image {
+  height: min-content;
+  width: 100%;
+}
+
+.images li{
+  margin-top: 7px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (width >= 768px){
+  .header {
+    padding: 0 20px 20px 0;
+  }
+
+  .section-title {
+    margin-block-start: 20px;
+    align-self: center;
+    justify-self: start;
+  }
+  
+  .header__theme-menu{
+    margin-block-start: 140px;
+  }
+
+  .header-text_container{
+    margin-block-end: 110px;
+  }
+
+  .top-right-border {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .bottom-left-border {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .rec-text {
+    top: 20px;
+    right: 50px;
+  }
+  
+  .rec-dot {
+    top: 27px;
+    right: 28px;
+  }
+
+  .card__list-title {
+    grid-area: card__list-title;
+    margin-bottom: 0;
+    min-width: 230px;
+    max-width: 230px;
+    margin-block-start: 25px;
+  }
+
+  .card-text {
+    margin: 0;
+    grid-area: card-text;
+  }
+
+  .card__list {
+    margin: 20px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-areas: 
+    "card__list-title card-text"
+    "card__list-title card-text"
+    "card__list-title card-text"
+    "card__list-title card-text"
+    "card__list-title card-text"
+    "card__list-title card-text"
+    ;
+    gap: 25px;
+    row-gap: 0;
+  }
+  
+  .card__list-item {
+    margin-top: 0px;
+  }
+
+  .concentration-list{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images {
+    padding: 20px
+  }
+
+  .images-card__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    grid-template-rows:  repeat(3, 240px);
+    gap: 20px;
+    grid-auto-flow: dense;
+    padding: 0;
+  }
+
+  .card-image {
+    inline-size: 100%;
+    block-size: 100%;
+    max-block-size: 100%;
+    object-fit: cover;
+  }
+
+  .image-item {
+    box-sizing: border-box;
+    background-color: rgb(255, 12, 12);
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .sunset-image-item {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .ice-cream-image-item {
+    grid-column: 3;
+    grid-row: span 2;
+  }
+
+  .books-image-item {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .tape-image-item {
+    grid-column: 1;
+    grid-row: span 2;
+  }
+
+  .street-image-item {
+    grid-column: 2/ 4;
+    grid-row: 3;
+  }
 }
