@@ -1,6 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-attachment: fixed;
   font-family: "IBM Plex mono";
   display: grid;
   grid-template-rows: 100vh repeat(2, minmax(min-content, max-content)) 100vh;
