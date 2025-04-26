@@ -1,13 +1,13 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-attachment: fixed;
   font-family: "IBM Plex mono";
   display: grid;
-  grid-template-rows: 100vh repeat(2, minmax(min-content, max-content)) 100vh;
+  grid-template-rows: 100vh repeat(1, minmax(min-content, max-content)) 100vh;
   grid-template-areas:
     "header"
-    "info";
+    "main"
+    "footer";
   margin: 0;
   gap: 25px;
   background-color: var(--background-color);
@@ -172,6 +172,10 @@
   border: 1px var(--link-color) solid;
 }
 
+.main {
+  grid-area: main;
+}
+
 .info {
   grid-area: info;
   grid-template-rows: repeat(minmax(min-content, max-content));
@@ -190,6 +194,7 @@
 
 .card__list-item {
   margin-top: 20px;
+  list-style: none;
 }
 
 .card__list-title {
@@ -228,6 +233,9 @@
 }
 
 .footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
