@@ -12,5 +12,21 @@
 }
 
 .theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  --background-color: #FFF1F7;
+  --header-label-text-color: #FFC2E6;
+  --header-label-box-shadow-color: #FFC2E6;
+  --title-text-color: #353430;
+  --text-font-size: 18px;
+  --title-color: #353430;
+  --title-background-color: #FFC2E6;
+  --text-color: #353430;
+  --text-shadow-color: #FF8DCB;
+  --border-color: rgb(53, 52, 48);
+  --border-color-hover: rgb(53, 52, 48, .4);
+  --header-background-image: url(../images/cover-image-light.png);
+  --decoration-color: #353430;
+  --button-color: #353430;
+  --decoration-visible: none;
+  --link-color: #353430;
+  --link-shadow-color: #FFC2E6;
 }

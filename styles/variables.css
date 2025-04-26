@@ -8,7 +8,12 @@
   --title-color: #FF0070;
   --text-color: #F1B2CE;
   --text-shadow-color: #FF0070;
-  --border-color: #FF0070;
+  --border-color: rgb(255, 0, 112);
+  --border-color-hover: rgb(255, 0, 112, .4);
   --header-background-image: url(../images/cover-image-dark.png);
   --decoration-color: #FF0070;
+  --button-color: #FF0070;
+  --decoration-visible: block;
+  --link-color: #F1B2CE;
+  --link-shadow-color: #FF0070;
 }
